@@ -11,7 +11,7 @@ function ReviewsSection() {
     {
       name: "John P.",
       quote:
-        "Authentic Arabian flavors that transport you straight to the Middle East. Omas is my go-to place for a great meal.",
+        "Authentic Arabian flavors that transport you straight to the Middle East. Oma's is my go-to place for a great meal.",
     },
     {
       name: "Priya K.",
@@ -44,7 +44,7 @@ function ReviewsSection() {
         animate="show"
         variants={containerVariants}
       >
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-brown-dark mb-4">
+        <h2 className=" text-4xl md:text-5xl text-brand-brown-dark mb-4">
           What Our Customers Say
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">

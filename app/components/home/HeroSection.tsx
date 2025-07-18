@@ -49,9 +49,9 @@ function HeroSection() {
       >
         <motion.h1
           variants={itemVariants}
-          className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold"
+          className=" text-5xl md:text-7xl lg:text-8xl"
         >
-          Welcome to Omas Restaurant
+          Welcome to Oma's Restaurant
         </motion.h1>
 
         <motion.p

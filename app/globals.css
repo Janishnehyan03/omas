@@ -1,27 +1,70 @@
 @import "tailwindcss";
 
+/* Use the new Tailwind v4 font setup and CSS variables for custom font integration */
+
 @layer base {
+  html {
+    font-family: var(--font-manrope, ui-sans-serif, system-ui);
+  }
   body {
-    font-family: "Inter", sans-serif;
-    background-color: #fffaf0;
-    color: #4a2c2a;
+    background-color: var(--color-brand-cream, #fffaf0);
+    color: var(--color-brand-brown-dark, #3a1f1d);
   }
 }
 
-@theme {
+/* Define color variables in :root for v4 custom properties */
+:root {
   --color-brand-brown: #4a2c2a;
   --color-brand-cream: #fffaf0;
   --color-brand-brown-dark: #3a1f1d;
   --color-brand-charcoal: #333333;
-  --color-brand-gold: #D4AF37;
+  --color-brand-gold: #d4af37;
 }
+
+/* Tailwind does not pick up custom properties in classnames like bg-brand-brown!
+   You must use inline style, style attribute, or extend Tailwind theme in tailwind.config.js for bg-brand-brown, text-brand-cream, etc.
+*/
+
+/* Example component styles using @apply for Tailwind utilities only */
 @layer components {
-  .btn-brand {
-    @apply font-serif px-4 py-2 rounded transition;
-    background-color: #4a2c2a; /* Replace bg-brand-brown */
-    color: #fffaf0; /* Replace text-brand-cream */
+  .btn-brand-brown {
+    @apply px-4 py-2 rounded transition;
+    /* Use inline style or extend Tailwind config for custom colors */
+    background-color: var(--color-brand-brown);
+    color: var(--color-brand-cream);
   }
-  .btn-brand:hover {
-    background-color: #3a1f1d; /* Replace hover:bg-brand-brown-dark */
+  .btn-brand-brown:hover {
+    background-color: var(--color-brand-brown-dark);
   }
 }
+
+/* Utility classes for custom colors via CSS variables (for style/className compatibility) */
+.bg-brand-brown {
+  background-color: var(--color-brand-brown) !important;
+}
+.bg-brand-cream {
+  background-color: var(--color-brand-cream) !important;
+}
+.text-brand-brown {
+  color: var(--color-brand-brown) !important;
+}
+.text-brand-cream {
+  color: var(--color-brand-cream) !important;
+}
+.text-brand-brown-dark {
+  color: var(--color-brand-brown-dark) !important;
+}
+.bg-brand-brown-dark {
+  background-color: var(--color-brand-brown-dark) !important;
+}
+.bg-brand-gold {
+  background-color: var(--color-brand-gold) !important;
+}
+.text-brand-gold {
+  color: var(--color-brand-gold) !important;
+}
+
+.bg-brand-charcoal {
+  background-color: var(--color-brand-charcoal) !important;
+}
+/* Now you can use className="bg-brand-brown text-brand-cream" etc. in your JSX. */

@@ -5,7 +5,7 @@ function ReservationSection() {
   return (
     <section
       id="reservation"
-      className="bg-gradient-to-br from-[#fff8f3] via-[#f9e5d8] to-[#f3e3d6] text-brand-brown py-24 px-4"
+      className=" text-brand-brown py-24 px-4"
     >
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         <div className="mb-8">

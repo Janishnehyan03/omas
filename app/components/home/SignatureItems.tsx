@@ -62,11 +62,11 @@ function SignatureItemsSection() {
         viewport={{ once: true, amount: 0.3 }} // Animate when 30% of the section is in view
         variants={sectionVariants}
       >
-        <h2 className="font-serif text-5xl font-bold text-brand-charcoal">
+        <h2 className=" text-5xl text-brand-charcoal">
           Our Signature Items
         </h2>
         <div className="mt-4 mb-12 h-1 w-24 bg-brand-gold mx-auto rounded-full" />
-        <p className="mt-4 text-xl text-gray-700 max-w-3xl mx-auto font-sans">
+        <p className="mt-4 text-xl text-gray-700 max-w-3xl mx-auto ">
           A selection of our most loved dishes, prepared with authentic recipes
           and the finest ingredients.
         </p>
@@ -101,10 +101,10 @@ function SignatureItemsSection() {
               />
             </div>
             <div className="p-8 text-left">
-              <h3 className="text-3xl font-bold font-serif text-brand-charcoal">
+              <h3 className="text-3xl font-bold  text-brand-charcoal">
                 {item.name}
               </h3>
-              <p className="mt-3 text-gray-600 font-sans">{item.description}</p>
+              <p className="mt-3 text-gray-600 ">{item.description}</p>
             
             </div>
           </motion.div>

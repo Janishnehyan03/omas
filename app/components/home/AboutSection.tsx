@@ -52,21 +52,21 @@ function AboutSection() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold text-brand-brown-dark text-center">
-            About Omas Restaurant
+          <h2 className=" text-4xl lg:text-5xl  text-brand-brown-dark text-center">
+            About Oma's Restaurant
           </h2>
           <p className="text-lg leading-relaxed text-gray-700 text-center max-w-3xl">
-            At Omas Restaurant, we bring you the true taste of Arabian
+            At Oma's Restaurant, we bring you the true taste of Arabian
             hospitality. With over 6 years of culinary excellence, we’ve become
             a beloved dining destination. Our journey has been driven by
             passion, flavor, and community.
           </p>
           <p className="text-lg leading-relaxed text-gray-700 text-center max-w-3xl">
-            Proudly serving thousands of happy customers, Omas is more than just
+            Proudly serving thousands of happy customers, Oma's is more than just
             a restaurant — it’s an experience. Our warm ambience and authentic
             dishes ensure every visit feels like home.
           </p>
-          <p className="font-serif text-2xl text-brand-brown text-center">
+          <p className=" text-2xl text-brand-brown text-center">
             Join us and taste the tradition!
           </p>
           <motion.div
@@ -115,7 +115,7 @@ function AboutSection() {
         >
           <Image
             src="/images/about-image.jpg"
-            alt="Interior of Omas Restaurant"
+            alt="Interior of Oma's Restaurant"
             width={600}
             height={700}
             className="rounded-xl shadow-lg object-cover aspect-[4/5]"

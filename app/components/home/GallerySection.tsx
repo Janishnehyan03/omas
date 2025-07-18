@@ -40,7 +40,7 @@ function GallerySection() {
       >
         <div className="flex items-center justify-center gap-3 mb-4">
           <Camera className="w-8 h-8 text-brand-brown-dark" />
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-brand-brown-dark">
+          <h2 className=" text-4xl md:text-5xl text-brand-brown-dark">
             From Our Visitors
           </h2>
         </div>

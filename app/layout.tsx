@@ -1,26 +1,29 @@
-import type { Metadata } from 'next';
-import { Inter, Playfair_Display, Dancing_Script } from 'next/font/google';
-import './globals.css';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import type { Metadata } from "next";
+import { Manrope } from "next/font/google";
+import "./globals.css";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 // Font configuration
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playfairDisplay = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair-display' });
-const dancingScript = Dancing_Script({ subsets: ['latin'], variable: '--font-dancing-script', weight: ['400', '500', '700'] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+});
 
 export const metadata: Metadata = {
-  title: 'Omas Restaurant - The Essence of Arabian Cuisine',
+  title: "Oma's Restaurant - The Essence of Arabian Cuisine",
   description:
-    'Experience rich, flavorful, and unforgettable Arabian dishes at Omas Restaurant. Serving authentic cuisine across 4 locations.',
+    "Experience rich, flavorful, and unforgettable Arabian dishes at Oma's Restaurant. Serving authentic cuisine across 4 locations.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <body
-        className={`${inter.variable} ${playfairDisplay.variable} ${dancingScript.variable} bg-brand-cream text-brand-brown-dark font-sans`}
-      >
+    <html lang="en" className={`${manrope.className}`}>
+      <body className={`bg-brand-cream text-brand-brown-dark `}>
         <Header />
         <main>{children}</main>
         <Footer />

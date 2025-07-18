@@ -68,12 +68,12 @@ function LocationsSection() {
       <div className="container mx-auto max-w-7xl">
         {/* --- Heading is great, no major changes needed --- */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-5xl md:text-6xl font-extrabold text-brand-brown-dark tracking-tight">
+          <h2 className=" text-5xl md:text-6xl text-brand-brown-dark tracking-tight">
             Our Store Locations
           </h2>
           <div className="mx-auto mt-4 mb-8 h-1 w-24 bg-gradient-to-r from-brand-gold to-brand-brown-dark rounded-full opacity-80" />
-          <p className="text-xl text-gray-700 max-w-xl mx-auto font-sans">
-            Find an Omas Restaurant near you and experience our signature
+          <p className="text-xl text-gray-700 max-w-xl mx-auto ">
+            Find an Oma's Restaurant near you and experience our signature
             hospitality.
           </p>
         </div>
@@ -108,7 +108,7 @@ function LocationsSection() {
               {/* Content Area: All text is now on a clean background for readability. */}
               <div className="flex-1 flex flex-col p-6">
                 {/* Location Name */}
-                <h3 className="text-2xl font-bold font-serif text-brand-brown-dark mb-2">
+                <h3 className="text-2xl font-bold  text-brand-brown-dark mb-2">
                   {loc.name}
                 </h3>
 
