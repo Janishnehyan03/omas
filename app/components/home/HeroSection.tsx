@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 function HeroSection() {
@@ -16,19 +17,43 @@ function HeroSection() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const images = [
+    "/images/6thmail.jpg",
+    "/images/kannur.jpg",
+    "/images/panoor.jpg",
+    "/images/mambram.jpg",
+  ];
+
+  // Carousel logic
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [current, images.length]);
+
   return (
     <section className="relative h-[70vh] md:h-[92vh] flex items-start justify-start text-left text-white overflow-hidden lg:p-10 px-3 sm:px-5">
-      {/* Background Image with Ken Burns Effect */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-image.jpg')" }}
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.08 }}
-        transition={{ duration: 17, ease: "easeInOut" }}
-      />
+      {/* Background Carousel */}
+      <div className="absolute inset-0 w-full h-full">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={images[current]}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url('${images[current]}')` }}
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1.1 }}
+            exit={{ opacity: 0, scale: 1.12 }}
+            transition={{ duration: 1.1, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
+      </div>
 
       {/* Small Dark Overlay for Readability */}
-      <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/45 pointer-events-none"></div>
 
       {/* Gradient Overlay (optional, keeps top fade) */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none"></div>
