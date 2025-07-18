@@ -3,6 +3,7 @@
 import { AnimatePresence, easeInOut, motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 // --- Framer Motion Variants ---
 const menuVariants = {
@@ -84,8 +85,6 @@ export function MobileNav({
     onClose?.();
   };
 
-  // Ensure keys are unique: use both href and label, and fallback to index if needed
-  // Also, fix reservation button key
   return (
     <AnimatePresence>
       {/* Background Overlay: closes on click/touch */}
@@ -116,12 +115,11 @@ export function MobileNav({
           <Image
             src={logoUrl}
             alt="Omas Restaurant Logo"
-            width={64}
-            height={64}
-            className="h-14 w-14 object-contain md:h-16 md:w-16"
+            width={56}
+            height={56}
+            className="h-12 w-12 object-contain"
             priority
           />
-          {/* Add a physical close button for accessibility */}
           <button
             aria-label="Close menu"
             onClick={onClose}
@@ -132,47 +130,24 @@ export function MobileNav({
         </div>
 
         <motion.nav
-          className="flex flex-col gap-4 px-8 pt-10 text-2xl font-semibold text-brand-charcoal"
+          className="flex flex-col gap-1 px-5 pt-6 text-base font-medium text-brand-charcoal"
           variants={navContainerVariants}
           initial="hidden"
           animate="visible"
           exit="hidden"
         >
-          {navLinks.map((link, index) => (
-            <motion.div
-              key={`${link.label}`}
-              variants={navItemVariants}
-            >
+            {navLinks.map((link) => (
+            <motion.div key={link.href} variants={navItemVariants}>
               <a
-                href={link.href}
-                className="block border-b border-gray-200 py-3 cursor-pointer"
-                onClick={(e) => handleNavLinkClick(link.href, e)}
-                onTouchStart={(e) => handleNavLinkClick(link.href, e)}
-                tabIndex={0}
-                role="link"
+              href={link.href}
+              className="block py-1 px-2 text-sm hover:text-brand-gold"
+              onClick={(e) => handleNavLinkClick(link.href, e)}
+              onTouchStart={(e) => handleNavLinkClick(link.href, e)}
               >
-                {link.label}
+              {link.label}
               </a>
             </motion.div>
-          ))}
-
-          {/* Reservation Button in Mobile Menu */}
-          <motion.div
-            key="reservation-link"
-            variants={navItemVariants}
-            className="mt-6"
-          >
-            <a
-              href="#reservation"
-              className="inline-block w-full rounded-full bg-brand-charcoal py-4 px-7 text-center font-semibold text-white shadow-lg cursor-pointer"
-              onClick={(e) => handleNavLinkClick("#reservation", e)}
-              onTouchStart={(e) => handleNavLinkClick("#reservation", e)}
-              tabIndex={0}
-              role="link"
-            >
-              Reservation
-            </a>
-          </motion.div>
+            ))}
         </motion.nav>
       </motion.div>
     </AnimatePresence>

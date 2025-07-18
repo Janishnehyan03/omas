@@ -83,12 +83,7 @@ function AboutSection() {
                   variants={statItemVariants}
                   className="p-8 rounded-xl bg-brand-off-white transition-transform duration-300 hover:scale-[1.05]"
                 >
-                  {/* Icon */}
-                  <div className="flex justify-center mb-6">
-                    <span className="bg-brand-brown/10 text-brand-brown p-4 rounded-full shadow-sm flex items-center justify-center">
-                      {stat.icon}
-                    </span>
-                  </div>
+             
                   {/* Counter */}
                   <p className="text-5xl md:text-6xl font-bold text-brand-brown-dark flex justify-center items-end">
                     <AnimatedCounter value={stat.value} />

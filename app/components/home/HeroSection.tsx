@@ -1,88 +1,81 @@
 "use client";
-// Make sure to add this import at the top of your app/page.tsx file
 import { motion } from "framer-motion";
-// Also ensure you have lucide-react for the chevron icon
 import { ChevronDown } from "lucide-react";
 
-// ... (keep the other component functions like AboutSection, etc.)
-
-// REPLACEMENT FOR YOUR HeroSection FUNCTION
 function HeroSection() {
-  // Variants for the container to orchestrate staggered animations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.3, // Each child will animate 0.3s after the previous one
-      },
+      transition: { staggerChildren: 0.3 },
     },
   };
 
-  // Variants for the text and button elements
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }, // Start slightly below and invisible
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Animate to original position
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
-    // Add overflow-hidden to the parent to contain the zooming background
-    <section className="relative h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative h-[70vh] md:h-[92vh] flex items-start justify-start text-left text-white overflow-hidden lg:p-10 px-3 sm:px-5">
       {/* Background Image with Ken Burns Effect */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/hero-image.jpg')" }}
         initial={{ scale: 1 }}
-        animate={{ scale: 1.1 }}
-        transition={{ duration: 15, ease: "easeInOut" }}
+        animate={{ scale: 1.08 }}
+        transition={{ duration: 17, ease: "easeInOut" }}
       />
 
-      {/* Gradient Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent pointer-events-none"></div>
 
       {/* Animated Content */}
       <motion.div
-        className="relative z-10 px-4"
+        className="relative z-10 px-4 sm:px-6 pt-20 md:pt-36 lg:pt-48 w-full max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-5xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.h1
-          variants={itemVariants}
-          className=" text-5xl md:text-7xl lg:text-8xl"
-        >
-          Welcome to Oma's Restaurant
-        </motion.h1>
-
         <motion.p
           variants={itemVariants}
-          className="mt-4 text-xl md:text-2xl max-w-3xl mx-auto"
+          className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tight drop-shadow-xl "
         >
-          Experience the Essence of Arabian Cuisine — Rich, Flavorful &
-          Unforgettable
+          Welcome to Oma&apos;s Restaurant
         </motion.p>
 
-        <motion.a
+        <motion.h1
           variants={itemVariants}
-          href="#menu"
-          className="mt-8 inline-block bg-brand-brown text-white px-8 py-3 rounded-full  text-lg hover:bg-brand-brown-dark transition-colors"
+          className="mt-6  text-3xl lg:text-7xl text-white/90 font-medium  "
         >
-          Explore Our Menu
-        </motion.a>
-      </motion.div>
+          Experience the Essence of Arabian Cuisine —{" "}
+          <span className="text-brand-gold font-semibold">
+            Rich, Flavorful &amp; Unforgettable.
+          </span>
+        </motion.h1>
 
-      {/* Animated Scroll Down Indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.5 }} // Appears after the main animation
-      >
+        {/* Button Row */}
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          variants={itemVariants}
+          className="mt-8 flex flex-row gap-3"
         >
-          <ChevronDown size={32} />
+          <a
+            href="#reservation"
+            className="flex-1 sm:flex-none text-base md:text-lg font-semibold px-5 py-2 rounded-full
+              shadow border 
+              bg-white/80 text-gray-600 hover:bg-brand-gold hover:bg-transparent hover:text-white transition
+              duration-150 backdrop-blur"
+          >
+            Reservation
+          </a>
+          <a
+            href="#locations"
+            className="flex-1 sm:flex-none text-base md:text-lg font-semibold px-5 py-2 rounded-full
+              border border-white/70 bg-transparent text-white hover:bg-white/80 hover:text-gray-700 transition
+              duration-150 backdrop-blur"
+          >
+            Locations
+          </a>
         </motion.div>
       </motion.div>
     </section>
