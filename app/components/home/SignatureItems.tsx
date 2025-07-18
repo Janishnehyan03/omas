@@ -1,12 +1,11 @@
-import Image from "next/image";
-import { useState, useRef } from "react";
 import {
-  easeInOut,
-  motion,
   AnimatePresence,
-  AnimationType,
+  easeInOut,
+  motion
 } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
 // Framer Motion Variants
 const sectionVariants = {
