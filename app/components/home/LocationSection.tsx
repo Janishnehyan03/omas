@@ -8,25 +8,25 @@ const locations = [
     name: "6th Mile",
     mapLink: "https://maps.app.goo.gl/Zgjkaz63jNgPo11m8",
     phone: "9526 051 554",
-    image: "/images/loc-1.jpg",
+    image: "/images/6thmail.jpg",
   },
   {
     name: "Mambaram",
     mapLink: "https://maps.app.goo.gl/JmFGXy6Gr9ZroYNy6",
     phone: "9526 002 444",
-    image: "/images/loc-2.jpg",
+    image: "/images/mambram.jpg",
   },
   {
     name: "Kannur",
     mapLink: "https://maps.app.goo.gl/GbjmNVpXtcgkq1VM9?g_st=ac",
     phone: "9526 006 444",
-    image: "/images/loc-3.jpg",
+    image: "/images/kannur.jpg",
   },
   {
     name: "Panoor",
     mapLink: "https://share.google/kDRXyLzYJw5mT9X08",
     phone: "+91 8606 019 888",
-    image: "/images/loc-4.jpg",
+    image: "/images/panoor.jpg",
   },
 ];
 

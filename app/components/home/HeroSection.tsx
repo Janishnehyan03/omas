@@ -27,8 +27,11 @@ function HeroSection() {
         transition={{ duration: 17, ease: "easeInOut" }}
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent pointer-events-none"></div>
+      {/* Small Dark Overlay for Readability */}
+      <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
+
+      {/* Gradient Overlay (optional, keeps top fade) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none"></div>
 
       {/* Animated Content */}
       <motion.div
@@ -46,7 +49,7 @@ function HeroSection() {
 
         <motion.h1
           variants={itemVariants}
-          className="mt-6  text-3xl lg:text-7xl text-white/90 font-medium  "
+          className="mt-6 text-3xl lg:text-7xl text-white/90 font-medium"
         >
           Experience the Essence of Arabian Cuisine —{" "}
           <span className="text-brand-gold font-semibold">
@@ -69,12 +72,12 @@ function HeroSection() {
             Reservation
           </a>
           <a
-            href="#locations"
+            href="#reviews"
             className="flex-1 sm:flex-none text-base md:text-lg font-semibold px-5 py-2 rounded-full
               border border-white/70 bg-transparent text-white hover:bg-white/80 hover:text-gray-700 transition
               duration-150 backdrop-blur"
           >
-            Locations
+            Testimonials
           </a>
         </motion.div>
       </motion.div>

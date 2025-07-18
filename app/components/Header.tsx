@@ -73,7 +73,7 @@ export function Header() {
 
           {/* --- Desktop Reservation Button --- */}
           <Link
-            href="#reservation"
+            href="#locations"
             className="hidden rounded-full px-7 py-3 font-semibold text-white
                        transition-all duration-300 hover:scale-105 bg-yellow-600 hover:text-brand-charcoal hover:shadow-lg md:inline-block border border-transparent hover:border-brand-charcoal"
           >
@@ -83,8 +83,8 @@ export function Header() {
           {/* --- Mobile Reservation Button + Hamburger Button (Row) --- */}
           <div className="flex items-center gap-3 md:hidden">
             <Link
-              href="#reservation"
-              className="rounded-full bg-brand-charcoal px-4 py-2 font-semibold text-white text-sm shadow transition-all hover:bg-brand-gold hover:text-brand-charcoal hover:shadow-lg border border-transparent hover:border-brand-charcoal"
+              href="#locations"
+              className="rounded-full bg-brand-brown px-4 py-2 font-semibold text-white text-sm shadow transition-all hover:bg-brand-gold hover:text-brand-charcoal hover:shadow-lg border border-transparent hover:border-brand-charcoal"
               tabIndex={0}
             >
               Reservation
