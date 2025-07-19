@@ -23,6 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${manrope.className}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Experience rich, flavorful, and unforgettable Arabian dishes at Oma's Restaurant. Serving authentic cuisine across 4 locations."
+        />
+      </head>
       <body className={`bg-brand-cream text-brand-brown-dark `}>
         <Header />
         <main>{children}</main>
