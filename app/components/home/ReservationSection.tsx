@@ -15,7 +15,7 @@ function ReservationSection() {
         </span>
       </div>
       <h2 className="text-5xl tracking-tight text-brand-brown drop-shadow-sm mb-4 text-center">
-        Book Your Party Hall
+        Book Your <br /> Party Hall
       </h2>
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         {/* Party Hall Image */}
