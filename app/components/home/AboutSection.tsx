@@ -14,7 +14,7 @@ function AboutSection() {
     {
       icon: <Globe size={28} />,
       value: 4,
-      label: "Worldwide Branches",
+      label: "Stores",
       suffix: "",
     },
     {

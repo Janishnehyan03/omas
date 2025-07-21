@@ -7,7 +7,7 @@ const navLinks = [
   { href: "#about", label: "About Us" },
   { href: "#menu", label: "Signature Menu" },
   { href: "#locations", label: "Our Locations" },
-  { href: "#reservation", label: "Book a Table" },
+  { href: "#reservation", label: "Book a party" },
 ];
 
 export function Footer() {
