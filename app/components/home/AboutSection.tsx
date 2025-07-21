@@ -7,7 +7,7 @@ function AboutSection() {
   const stats = [
     {
       icon: <Clock size={28} />,
-      value: 6,
+      value: 33,
       label: "Years Experience",
       suffix: "+",
     },
