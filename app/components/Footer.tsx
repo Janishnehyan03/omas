@@ -29,9 +29,7 @@ export function Footer() {
               <h3 className="text-3xl font-extrabold mb-0.5 tracking-tight text-white drop-shadow-sm">
                 Oma's Restaurant
               </h3>
-              <span className="text-lg text-brand-cream/75 font-medium">
-                Est. {new Date().getFullYear()-2}
-              </span>
+           
             </div>
           </div>
           <p className="text-brand-cream/90 text-lg max-w-xs mt-3">
