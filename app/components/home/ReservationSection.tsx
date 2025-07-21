@@ -31,7 +31,7 @@ function ReservationSection() {
           Reserve Now
         </span>
       </div>
-      <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight text-brand-brown drop-shadow-sm mb-10 text-center font-serif">
+      <h2 className="text-5xl md:text-6xl font-semibold  tracking-tight text-brand-brown  mb-10 text-center ">
         Celebrate in Style<br />
         <span className="text-brand-brown/80 font-normal text-3xl md:text-4xl block mt-2">
           Book Your Party Hall Today
@@ -80,7 +80,7 @@ function ReservationSection() {
         {/* Call to Action Button */}
         <a
           href="tel:9562051554"
-          className="inline-flex items-center gap-3 bg-brand-brown hover:bg-brand-brown-dark transition-all text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg ring-2 ring-brand-brown/20 focus:ring-4 focus:ring-brand-brown/40 focus:outline-none hover:scale-105"
+          className="inline-flex items-center gap-3 bg-amber-600 hover:bg-brand-brown-dark transition-all text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg ring-2 ring-brand-brown/20 focus:ring-4 focus:ring-brand-brown/40 focus:outline-none hover:scale-105"
           aria-label="Call to Book Now"
         >
           <Phone className="w-6 h-6" />
