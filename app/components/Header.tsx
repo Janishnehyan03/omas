@@ -77,7 +77,7 @@ export function Header() {
             className="hidden rounded-full px-7 py-3 font-semibold text-white
                        transition-all duration-300 hover:scale-105 bg-yellow-600 hover:text-brand-charcoal hover:shadow-lg md:inline-block border border-transparent hover:border-brand-charcoal"
           >
-            Stores
+           Our Stores
           </Link>
 
           {/* --- Mobile Stores Button + Hamburger Button (Row) --- */}
@@ -87,7 +87,7 @@ export function Header() {
               className="rounded-full bg-brand-brown px-4 py-2 font-semibold text-white text-sm shadow transition-all hover:bg-brand-gold hover:text-brand-charcoal hover:shadow-lg border border-transparent hover:border-brand-charcoal"
               tabIndex={0}
             >
-              Stores
+             Our Stores
             </Link>
             <button
               className="relative z-[60] h-8 w-8 text-brand-charcoal flex items-center justify-center"
