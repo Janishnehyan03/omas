@@ -24,7 +24,7 @@ const locations = [
   },
   {
     name: "Panoor",
-    mapLink: "https://maps.app.goo.gl/yVQbzz2dJr4Wqk9z7",
+    mapLink: "https://maps.app.goo.gl/6s6MVNZk9g5V8mAJ6",
     phone: "+91 8606 019 888",
     image: "/images/panoor.jpg",
   },
