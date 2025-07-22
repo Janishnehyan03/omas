@@ -10,12 +10,15 @@ import LocationsSection from "./components/home/LocationSection";
 import ReviewsSection from "./components/home/ReviewsSection";
 import GallerySection from "./components/home/GallerySection";
 import ReservationSection from "./components/home/ReservationSection";
+import WeAreHiring from "./components/home/WeAreHiring";
 
 // Main Page Component
 export default function HomePage() {
+  console.log(process.env.NEXT_PUBLIC_HIRING_PERIOD);
   return (
     <>
       <HeroSection />
+      {process.env.NEXT_PUBLIC_HIRING_PERIOD === "true" && <WeAreHiring />}
       <AboutSection />
       <SignatureItemsSection />
       <LocationsSection />
