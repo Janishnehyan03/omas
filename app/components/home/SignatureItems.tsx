@@ -26,6 +26,7 @@ type SignatureItem = {
 
 function SignatureItemsSection() {
   const signatureItems: SignatureItem[] = [
+    { name: "Omas Paal Porotta", image: "/images/omas paal.jpg", description: "" },
     { name: "Peppery Grilled Paneer", image: "/images/Peppery grilled paneer .JPG", description: "" },
     { name: "Kabab", image: "/images/Kabab .jpg", description: "" },
     { name: "Thali Meals", image: "/images/Thali meals .jpg", description: "" },
@@ -37,7 +38,7 @@ function SignatureItemsSection() {
     { name: "Honey Alfahm", image: "/images/Honey alfahm .JPG", description: "" },
     { name: "Fish Tawa Fry", image: "/images/Fish tawa fry.JPEG.jpg", description: "" },
     { name: "Puyyapala ", image: "/images/Puyyapala c .JPG", description: "" },
-    { name: "Kanthari Kabab", image: "/images/Kanthari kabab .JPG", description: "" },
+    // { name: "Kanthari Kabab", image: "/images/Kanthari kabab .JPG", description: "" },
     // { name: "Alfahm Cashew", image: "/images/Alfahm cashew .JPG", description: "" }
   ];
 
