@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Menu3DCards from "./Menu3dCards";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -61,6 +62,8 @@ function SignatureItemsSection() {
           and the finest ingredients.
         </p>
       </motion.div>
+
+      <Menu3DCards />
 
       {/* Signature Items Grid */}
       <motion.div
