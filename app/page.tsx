@@ -18,11 +18,12 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      {process.env.NEXT_PUBLIC_HIRING_PERIOD === "true" && <WeAreHiring />}
+      
       <AboutSection />
       <SignatureItemsSection />
       <LocationsSection />
       <ReviewsSection />
+      {process.env.NEXT_PUBLIC_HIRING_PERIOD === "true" && <WeAreHiring />}
       <GallerySection />
       <ReservationSection />
     </>
