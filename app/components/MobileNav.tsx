@@ -1,9 +1,9 @@
 "use client";
 
 import { AnimatePresence, easeInOut, motion } from "framer-motion";
+import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
 
 // --- Framer Motion Variants ---
 const menuVariants = {
@@ -99,10 +99,13 @@ export function MobileNav({
         transition={{ duration: 0.3 }}
       />
 
-      {/* Navigation Menu: does NOT close on click/touch inside */}
+      {/* Mobile Menu */}
       <motion.div
         id="mobile-menu"
-        className="fixed top-0 left-0 z-[55] h-full w-full max-w-sm bg-white md:hidden shadow-xl"
+        className="
+          fixed top-0 left-0 z-[55] h-full w-full max-w-[100vw] bg-white md:hidden shadow-xl
+          flex flex-col
+        "
         variants={menuVariants}
         initial="hidden"
         animate="visible"
@@ -110,46 +113,58 @@ export function MobileNav({
         onClick={stopPropagation}
         onTouchStart={stopPropagation}
       >
-        {/* Card Top: Logo and Close Button */}
-        <div className="flex items-center justify-between px-6 pt-6 pb-2">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 pt-6 pb-4">
           <Image
             src={logoUrl}
             alt="Omas Restaurant Logo"
-            width={56}
-            height={56}
-            className="h-12 w-12 object-contain"
+            width={64}
+            height={64}
+            className="h-14 w-14 object-contain"
             priority
           />
           <button
             aria-label="Close menu"
             onClick={onClose}
-            className="text-3xl ml-2"
+            className="text-4xl text-gray-800"
           >
             &times;
           </button>
         </div>
 
+        {/* Navigation Links (Scrollable) */}
         <motion.nav
-          className="flex flex-col gap-1 px-5 pt-6 text-base font-medium text-brand-charcoal"
+          className="flex flex-col gap-4 px-6 py-6 text-lg font-semibold text-gray-900 flex-1 overflow-y-auto"
           variants={navContainerVariants}
           initial="hidden"
           animate="visible"
           exit="hidden"
         >
-            {navLinks.map((link) => (
+          {navLinks.map((link) => (
             <motion.div key={link.href} variants={navItemVariants}>
               <a
-              href={link.href}
-              className="block py-1 px-2 text-sm hover:text-brand-gold"
-              onClick={(e) => handleNavLinkClick(link.href, e)}
-              onTouchStart={(e) => handleNavLinkClick(link.href, e)}
+                href={link.href}
+                className="block py-3 px-4 rounded-md hover:bg-gray-100 hover:text-yellow-600 transition-all duration-200"
+                onClick={(e) => handleNavLinkClick(link.href, e)}
+                onTouchStart={(e) => handleNavLinkClick(link.href, e)}
               >
-              {link.label}
+                {link.label}
               </a>
             </motion.div>
-            ))}
+          ))}
         </motion.nav>
+
+        {/* Social Links & Contact Info */}
+
+        {/* Divider & Copyright */}
+        <div className="text-center mt-2 pb-7">
+          <p className="text-sm text-brand-cream/75 tracking-wide">
+            © {new Date().getFullYear()} <span className="font-semibold  text-gray-700">Oma&apos;s Restaurant</span>. All Rights Reserved.
+          </p>
+        </div>
+
       </motion.div>
+      {/* End of Mobile Menu */}
     </AnimatePresence>
   );
 }

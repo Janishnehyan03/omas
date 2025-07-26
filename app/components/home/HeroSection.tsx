@@ -76,7 +76,7 @@ function HeroSection() {
           variants={itemVariants}
           className="mt-6 text-3xl lg:text-7xl text-white/90 font-medium"
         >
-          Experience the Essence of Arabian Cuisine —{" "}
+          Experience the Essence of Multi Cuisine —{" "}
           <span className="text-brand-gold font-semibold">
             Rich, Flavorful &amp; Unforgettable.
           </span>

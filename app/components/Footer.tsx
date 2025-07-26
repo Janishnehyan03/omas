@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, Phone } from 'lucide-react'
+import { MapPin, Phone, Facebook, Instagram } from 'lucide-react'
 
 // Data for navigation links (updated for modern UI)
 const navLinks = [
@@ -29,13 +29,34 @@ export function Footer() {
               <h3 className="text-3xl font-extrabold mb-0.5 tracking-tight text-white drop-shadow-sm">
                 Oma's Restaurant
               </h3>
-           
             </div>
           </div>
           <p className="text-brand-cream/90 text-lg max-w-xs mt-3">
             Experience the Essence of Arabian Cuisine —<br />
             <span className="font-semibold text-white">Rich, Flavorful & Unforgettable.</span>
           </p>
+
+          {/* Social Media Links */}
+          <div className="flex gap-4 mt-6">
+            <a
+              href="https://www.facebook.com/share/1AjoPBsV15/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-brand-cream/10 hover:bg-brand-cream/20 transition-colors group"
+              aria-label="Visit Oma's Restaurant on Facebook"
+            >
+              <Facebook size={24} className="text-brand-cream group-hover:text-yellow-200" />
+            </a>
+            <a
+              href="https://www.instagram.com/oma_s_restaurant?igsh=MXI0OWthMnVnaHVkbw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-brand-cream/10 hover:bg-brand-cream/20 transition-colors group"
+              aria-label="Visit Oma's Restaurant on Instagram"
+            >
+              <Instagram size={24} className="text-brand-cream group-hover:text-yellow-200" />
+            </a>
+          </div>
         </div>
 
         {/* Quick Links */}
