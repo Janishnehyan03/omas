@@ -31,7 +31,7 @@ function SignatureItemsSection() {
     { name: "Peppery Grilled Paneer", image: "/images/Peppery grilled paneer .JPG", description: "" },
     { name: "Kabab", image: "/images/Kabab .jpg", description: "" },
     { name: "Thali Meals", image: "/images/Thali meals .jpg", description: "" },
-    { name: "Beef Oma’s", image: "/images/Beef Oma’s .JPEG.jpg", description: "" },
+    { name: "Beef Oma’s", image: "/images/beef-omas.jpg", description: "" },
     { name: "Ginger Chicken", image: "/images/Ginger chicken .JPG", description: "" },
     { name: "Peri Peri Al-fahm", image: "/images/Peri peri Al-fahm .JPG", description: "" },
     { name: "Chicken Kolhapuri", image: "/images/Chicken kolhapuri .JPEG.jpg", description: "" },
