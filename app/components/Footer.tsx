@@ -85,12 +85,12 @@ export function Footer() {
           </h3>
           <div className="space-y-4 text-lg">
             <a
-              href="tel:9526051554"
+              href="tel:9562051554"
               className="flex items-center gap-3 hover:text-yellow-200 transition-colors group"
               aria-label="Call Oma's Restaurant"
             >
               <Phone size={22} strokeWidth={2.3} className="text-brand-cream group-hover:text-yellow-200" />
-              <span className="font-semibold tracking-wide">+91 9526 051 554</span>
+              <span className="font-semibold tracking-wide">+91 9562 051 554</span>
             </a>
             <p className="flex items-center gap-3">
               <MapPin size={22} strokeWidth={2.3} className="text-brand-cream" />
