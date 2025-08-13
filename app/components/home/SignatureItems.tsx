@@ -38,7 +38,7 @@ function SignatureItemsSection() {
     { name: "Oma’s Fried Rice", image: "/images/Oma’s fried rice .JPG", description: "" },
     { name: "Honey Alfahm", image: "/images/Honey alfahm .JPG", description: "" },
     { name: "Fish Tawa Fry", image: "/images/Fish tawa fry.JPEG.jpg", description: "" },
-    { name: "Puyyapala ", image: "/images/Puyyapala c .JPG", description: "" },
+    { name: "Puyyapala Chicken", image: "/images/Puyyapala c .JPG", description: "" },
     // { name: "Kanthari Kabab", image: "/images/Kanthari kabab .JPG", description: "" },
     // { name: "Alfahm Cashew", image: "/images/Alfahm cashew .JPG", description: "" }
   ];

@@ -32,7 +32,7 @@ export function Footer() {
             </div>
           </div>
           <p className="text-brand-cream/90 text-lg max-w-xs mt-3">
-            Experience the Essence of Arabian Cuisine —<br />
+            Experience the Essence of Multi Cuisine —<br />
             <span className="font-semibold text-white">Rich, Flavorful & Unforgettable.</span>
           </p>
 
