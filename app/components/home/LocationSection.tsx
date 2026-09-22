@@ -11,7 +11,7 @@ const locations = [
     image: "/images/6thmail.jpg",
   },
   {
-    name: "Mambaram",
+    name: "Mambram",
     mapLink: "https://maps.app.goo.gl/JmFGXy6Gr9ZroYNy6",
     phone: "9526 002 444",
     image: "/images/mambram.jpg",
@@ -21,6 +21,12 @@ const locations = [
     mapLink: "https://maps.app.goo.gl/GbjmNVpXtcgkq1VM9?g_st=ac",
     phone: "9526 006 444",
     image: "/images/kannur.jpg",
+  },
+  {
+    name: "Bangalore",
+    mapLink: "https://www.google.com/maps/search/Oma's+Restaurant+Bangalore",
+    phone: "Available soon",
+    image: "/images/bangalore.jpeg",
   },
   {
     name: "Panoor",
@@ -84,7 +90,7 @@ function LocationsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
         >
           {locations.map((loc) => (
             <motion.div
@@ -114,14 +120,20 @@ function LocationsSection() {
 
                 {/* Info section with better UX */}
                 <div className="flex-1 space-y-2 mt-2">
-                  {/* Clickable Phone Number */}
-                  <a
-                    href={`tel:${loc.phone.replace(/\s/g, "")}`} // Make phone number clickable
-                    className="flex items-center gap-3 text-gray-600 transition-colors hover:text-brand-gold"
-                  >
-                    <Phone size={16} className="text-brand-gold/80" />
-                    <span className="font-medium">{loc.phone}</span>
-                  </a>
+                  {loc.phone && loc.phone !== "Available soon" ? (
+                    <a
+                      href={`tel:${loc.phone.replace(/\s/g, "")}`}
+                      className="flex items-center gap-3 text-gray-600 transition-colors hover:text-brand-gold"
+                    >
+                      <Phone size={16} className="text-brand-gold/80" />
+                      <span className="font-medium">{loc.phone}</span>
+                    </a>
+                  ) : (
+                    <div className="flex items-center gap-3 text-gray-600">
+                      <Phone size={16} className="text-brand-gold/80" />
+                      <span className="font-medium">{loc.phone || "Phone coming soon"}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Primary Call-to-Action Button */}

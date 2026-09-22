@@ -12,26 +12,27 @@ const menus: Menu[] = [
     {
         id: 1,
         title: "Kannur",
-        pdf: "/menu/omas-kannur.pdf",
-
+        pdf: "/menu/kannur.pdf",
     },
     {
         id: 2,
-        title: "Panoor",
-        pdf: "/menu/omas-panoor.pdf",
-
+        title: "Bangalore",
+        pdf: "/menu/bangalore.pdf",
     },
     {
         id: 3,
         title: "Mambram",
-        pdf: "/menu/omas-mambram.pdf",
-
+        pdf: "/menu/mambram.pdf",
     },
     {
         id: 4,
+        title: "Panoor",
+        pdf: "/menu/omas-panoor.pdf",
+    },
+    {
+        id: 5,
         title: "6th Mile",
         pdf: "/menu/omas-6th-mile.pdf",
-
     },
 ];
 
@@ -48,7 +49,7 @@ const MenuButtons: React.FC = () => {
     return (
         <div className="">
             <div className="max-w-6xl mx-auto mt-3">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-2">
                     {menus.map((menu) => (
                         <div key={menu.id} className="group">
                             <button
