@@ -24,9 +24,15 @@ const locations = [
   },
   {
     name: "Bangalore",
-    mapLink: "https://www.google.com/maps/search/Oma's+Restaurant+Bangalore",
+    mapLink: "https://maps.app.goo.gl/4EWG9QK1j1ZgNCKEA",
     phone: "Available soon",
     image: "/images/bangalore.jpeg",
+  },
+  {
+    name: "Iritty",
+    mapLink: "https://www.google.com/maps/search/Oma's+Restaurant+Iritty",
+    phone: "Available soon",
+    image: "/images/iritty.jpe",
   },
   {
     name: "Panoor",
@@ -90,7 +96,7 @@ function LocationsSection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {locations.map((loc) => (
             <motion.div
