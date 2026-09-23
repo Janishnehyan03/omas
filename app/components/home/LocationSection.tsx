@@ -24,7 +24,7 @@ const locations = [
   },
   {
     name: "Bangalore",
-    mapLink: "https://maps.app.goo.gl/4EWG9QK1j1ZgNCKEA",
+    mapLink: "https://www.google.com/maps/search/Oma's+Restaurant+Bangalore",
     phone: "Available soon",
     image: "/images/bangalore.jpeg",
   },
