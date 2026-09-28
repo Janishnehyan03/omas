@@ -34,6 +34,11 @@ const menus: Menu[] = [
         title: "6th Mile",
         pdf: "/menu/omas-6th-mile.pdf",
     },
+    {
+        id: 6,
+        title: "Iritty",
+        pdf: "/menu/iritty.pdf",
+    },
 ];
 
 const MenuButtons: React.FC = () => {
@@ -49,7 +54,7 @@ const MenuButtons: React.FC = () => {
     return (
         <div className="">
             <div className="max-w-6xl mx-auto mt-3">
-                <div className="grid grid-cols-2 lg:grid-cols-5 gap-2">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
                     {menus.map((menu) => (
                         <div key={menu.id} className="group">
                             <button

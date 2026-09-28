@@ -29,10 +29,11 @@ const locations = [
     image: "/images/bangalore.jpeg",
   },
   {
-    name: "Iritty",
+    name: "Oma’s restaurant & rooms",
+    address: "Kizhoor, Iritty",
     mapLink: "https://www.google.com/maps/search/Oma's+Restaurant+Iritty",
     phone: "Available soon",
-    image: "/images/iritty.jpe",
+    image: "/images/iritty.jpeg",
   },
   {
     name: "Panoor",
@@ -120,9 +121,15 @@ function LocationsSection() {
               {/* Content Area: All text is now on a clean background for readability. */}
               <div className="flex-1 flex flex-col p-6">
                 {/* Location Name */}
-                <h3 className="text-2xl font-bold  text-brand-brown-dark mb-2">
+                <h3 className="text-2xl font-bold leading-tight text-brand-brown-dark mb-1">
                   {loc.name}
                 </h3>
+                
+                {/* Location Address */}
+                {/* @ts-ignore - address is optional and only on some locations */}
+                {loc.address && (
+                  <p className="text-gray-600 text-sm mb-2">{loc.address}</p>
+                )}
 
                 {/* Info section with better UX */}
                 <div className="flex-1 space-y-2 mt-2">
