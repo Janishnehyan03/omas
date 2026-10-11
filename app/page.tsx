@@ -5,6 +5,7 @@ import GallerySection from "./components/home/GallerySection";
 import HeroSection from "./components/home/HeroSection";
 import LocationsSection from "./components/home/LocationSection";
 import ReservationSection from "./components/home/ReservationSection";
+import MdSection from "./components/home/MdSection";
 import ReviewsSection from "./components/home/ReviewsSection";
 import SignatureItemsSection from "./components/home/SignatureItems";
 import WeAreHiring from "./components/home/WeAreHiring";
@@ -14,6 +15,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <AboutSection />
+      <MdSection />
       <SignatureItemsSection />
       <LocationsSection />
       <ReviewsSection />

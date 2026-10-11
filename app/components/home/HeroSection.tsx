@@ -22,7 +22,6 @@ function HeroSection() {
     "/images/kannur.jpg",
     "/images/panoor.jpg",
     "/images/mambram.jpg",
-    "/images/md web.png",
   ];
 
   // Carousel logic

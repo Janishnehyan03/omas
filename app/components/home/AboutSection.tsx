@@ -13,13 +13,13 @@ function AboutSection() {
     },
     {
       icon: <Globe size={28} />,
-      value: 4,
+      value: 6,
       label: "Stores",
       suffix: "",
     },
     {
       icon: <Star size={28} />,
-      value: 20000,
+      value: 40000,
       label: "Happy Customers",
       suffix: "+",
     },
